@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcul Indemnité de Licenciement Maroc 2026 – Simulateur Gratuit</title>
+<meta name="description" content="Calculez votre indemnité de licenciement au Maroc selon l'Article 53 du Code du travail : ancienneté, salaire, méthode de calcul détaillée. Outil gratuit, mis à jour 2026.">
+<link rel="canonical" href="https://calculmaroc.com/calcul-indemnite-licenciement-maroc/">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Comment calculer l'indemnité de licenciement au Maroc ?","acceptedAnswer":{"@type":"Answer","text":"Selon l'article 53 du Code du travail, l'indemnité se calcule par tranche d'ancienneté : 96 heures de salaire par an pour les 5 premières années, 144 heures par an de la 6e à la 10e année, 192 heures par an de la 11e à la 15e année, et 240 heures par an au-delà de 15 ans. Le salaire horaire de référence s'obtient en divisant le salaire mensuel brut par 191."}},
+    {"@type":"Question","name":"Qui a droit à l'indemnité de licenciement ?","acceptedAnswer":{"@type":"Answer","text":"Tout salarié en CDI ayant au moins six mois d'ancienneté dans la même entreprise, en cas de licenciement, quel que soit le mode ou la périodicité de rémunération."}},
+    {"@type":"Question","name":"L'indemnité peut-elle être plus élevée que le barème légal ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Le contrat de travail, la convention collective ou le règlement intérieur peuvent prévoir des dispositions plus favorables au salarié que le barème légal minimum."}}
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="/">CalculMaroc</a>
+    <nav>
+      <a href="/#salaire">Salaire</a>
+      <a href="/#credit">Crédit</a>
+      <a href="/#travail">Droit du travail</a>
+      <a href="/a-propos.html">À propos</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <p class="breadcrumb"><a href="/">Accueil</a> &gt; <a href="/#travail">Droit du travail</a> &gt; Calcul indemnité de licenciement</p>
+  <h1>Calcul de l'indemnité de licenciement au Maroc</h1>
+  <p class="subtitle">Simulateur basé sur l'article 53 du Code du travail marocain. Entrez votre salaire brut mensuel et votre ancienneté pour estimer votre indemnité légale minimale.</p>
+  <p class="updated">Mis à jour le 2 juillet 2026 — barème inchangé depuis la loi n°65-99 (Code du travail).</p>
+
+  <div class="calc-card">
+    <div class="field">
+      <label for="salaire">Salaire mensuel brut (DH)</label>
+      <input type="number" id="salaire" placeholder="Ex: 8000" min="0" step="1">
+      <div class="hint">Moyenne du salaire brut des 52 dernières semaines si votre salaire varie.</div>
+    </div>
+    <div class="field">
+      <label for="anciennete">Ancienneté (années complètes)</label>
+      <input type="number" id="anciennete" placeholder="Ex: 7" min="0" step="1">
+      <div class="hint">Minimum 6 mois requis pour ouvrir droit à l'indemnité.</div>
+    </div>
+    <button class="calc-btn" onclick="calculer()">Calculer mon indemnité</button>
+
+    <div class="result" id="result">
+      <div>Indemnité de licenciement estimée</div>
+      <div class="amount" id="amount">0 DH</div>
+      <table id="breakdown"></table>
+    </div>
+
+    <div class="disclaimer">
+      Ce simulateur est fourni à titre indicatif uniquement et ne remplace pas un conseil juridique, comptable ou fiscal professionnel. Le résultat correspond au minimum légal prévu par l'article 53 du Code du travail ; votre convention collective, votre contrat de travail ou votre règlement intérieur peuvent prévoir un montant plus favorable. Consultez un avocat ou un expert en droit du travail pour toute décision importante.
+    </div>
+  </div>
+
+  <h2>Méthode de calcul (article 53 du Code du travail)</h2>
+  <p>L'indemnité de licenciement se calcule par tranche d'ancienneté, en heures de salaire :</p>
+  <ul>
+    <li><strong>96 heures</strong> de salaire par an pour chacune des 5 premières années</li>
+    <li><strong>144 heures</strong> de salaire par an de la 6ᵉ à la 10ᵉ année</li>
+    <li><strong>192 heures</strong> de salaire par an de la 11ᵉ à la 15ᵉ année</li>
+    <li><strong>240 heures</strong> de salaire par an au-delà de la 15ᵉ année</li>
+  </ul>
+  <p>Le salaire horaire de référence s'obtient en divisant le salaire mensuel brut par <strong>191</strong> (nombre d'heures légales de travail par mois).</p>
+
+  <h2>Exemple chiffré</h2>
+  <p>Un salarié avec un salaire brut de <strong>8 000 DH/mois</strong> et <strong>7 ans</strong> d'ancienneté :</p>
+  <ul>
+    <li>Salaire horaire : 8 000 ÷ 191 = 41,88 DH/heure</li>
+    <li>5 premières années : 5 × 96h × 41,88 DH = 20 102 DH</li>
+    <li>2 années suivantes (6e et 7e) : 2 × 144h × 41,88 DH = 12 062 DH</li>
+    <li><strong>Total estimé : 32 164 DH</strong></li>
+  </ul>
+
+  <h2 class="faq">Questions fréquentes</h2>
+  <div class="faq">
+    <h3>Qui a droit à l'indemnité de licenciement ?</h3>
+    <p>Tout salarié en CDI ayant au moins six mois d'ancienneté dans la même entreprise, en cas de licenciement.</p>
+    <h3>L'indemnité peut-elle être plus élevée ?</h3>
+    <p>Oui, si le contrat, la convention collective ou le règlement intérieur prévoit un montant plus favorable que le minimum légal.</p>
+    <h3>Ce calcul inclut-il l'indemnité pour licenciement abusif ?</h3>
+    <p>Non. Ce simulateur calcule uniquement l'indemnité légale d'ancienneté (article 53). Les dommages-intérêts pour licenciement abusif ou sans cause réelle et sérieuse sont distincts et fixés par le tribunal.</p>
+  </div>
+
+  <p class="sources">Source : Code du travail marocain, loi n°65-99, article 53.</p>
+
+  <h2>Autres outils</h2>
+  <div class="tool-grid">
+    <a href="/">← Retour à tous les calculateurs</a>
+  </div>
+</main>
+<footer class="site">
+  <div>CalculMaroc — Simulateurs financiers gratuits pour le Maroc</div>
+  <div><a href="/a-propos.html">À propos</a> · <a href="/contact.html">Contact</a> · <a href="/politique-de-confidentialite.html">Confidentialité</a> · <a href="/mentions-legales.html">Mentions légales</a> · <a href="/avertissement.html">Avertissement</a></div>
+</footer>
+<script>
+function calculer(){
+  var salaire = parseFloat(document.getElementById('salaire').value);
+  var anciennete = parseFloat(document.getElementById('anciennete').value);
+  if(!salaire || salaire <= 0 || anciennete === undefined || anciennete === null || isNaN(anciennete) || anciennete < 0){
+    alert('Merci de remplir le salaire et l\'ancienneté correctement.');
+    return;
+  }
+  var tauxHoraire = salaire / 191;
+  var restant = anciennete;
+  var total = 0;
+  var rows = [];
+
+  function tranche(nbAnnees, heures, label){
+    if(restant <= 0) return;
+    var annees = Math.min(restant, nbAnnees);
+    var montant = annees * heures * tauxHoraire;
+    total += montant;
+    rows.push('<tr><td>' + label + ' (' + annees.toFixed(0) + ' an(s) x ' + heures + 'h)</td><td>' + Math.round(montant).toLocaleString('fr-FR') + ' DH</td></tr>');
+    restant -= annees;
+  }
+
+  tranche(5, 96, '5 premières années');
+  tranche(5, 144, '6e à 10e année');
+  tranche(5, 192, '11e à 15e année');
+  tranche(restant, 240, 'Au-delà de 15 ans');
+
+  document.getElementById('amount').textContent = Math.round(total).toLocaleString('fr-FR') + ' DH';
+  document.getElementById('breakdown').innerHTML = rows.join('');
+  document.getElementById('result').classList.add('show');
+}
+</script>
+</body>
+</html>
